@@ -17,7 +17,7 @@ jobs:
         with:
           release-type: node
 
-      # Les projets utilisent @v1 : on déplace ce repère sur chaque nouvelle version 1.x.y.
+      # Projects use @v1: this marker moves to every new 1.x.y release.
       - uses: actions/checkout@v7.0.1
         if: steps.release.outputs.release_created == 'true'
       - name: Déplacer le repère de version majeure
