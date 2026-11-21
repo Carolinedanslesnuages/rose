@@ -1,0 +1,33 @@
+name: Release Please
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          release-type: node
+
+      # Les projets utilisent @v1 : on déplace ce repère sur chaque nouvelle version 1.x.y.
+      - uses: actions/checkout@v7.0.1
+        if: steps.release.outputs.release_created == 'true'
+      - name: Déplacer le repère de version majeure
+        if: steps.release.outputs.release_created == 'true'
+        env:
+          MAJEURE: v${{ steps.release.outputs.major }}
+          TAG: ${{ steps.release.outputs.tag_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch --tags
+          git tag -f "$MAJEURE" "$TAG"
+          git push -f origin "$MAJEURE"

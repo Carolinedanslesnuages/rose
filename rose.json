@@ -1,0 +1,16 @@
+{
+  "types": {
+    "feat": { "emoji": "🌸", "sens": "nouvelle fonctionnalité", "pourquoi": "une fonctionnalité qui éclot" },
+    "fix": { "emoji": "🐞", "sens": "correction", "pourquoi": "la coccinelle, ladybug : un bug" },
+    "docs": { "emoji": "🧾", "sens": "documentation", "pourquoi": "un document" },
+    "style": { "emoji": "💄", "sens": "interface et styles", "pourquoi": "le gitmoji officiel, rouge" },
+    "refactor": { "emoji": "🌺", "sens": "refactorisation", "pourquoi": "même plante, nouvelle fleur" },
+    "perf": { "emoji": "🌶️", "sens": "performances", "pourquoi": "ça pique, ça va vite" },
+    "test": { "emoji": "🧠", "sens": "tests", "pourquoi": "on vérifie, on réfléchit" },
+    "build": { "emoji": "🛍️", "sens": "construction, dépendances", "pourquoi": "on emballe" },
+    "ci": { "emoji": "💜", "sens": "intégration continue", "pourquoi": "le cœur de la CI, en violet" },
+    "chore": { "emoji": "🧰", "sens": "entretien", "pourquoi": "la boîte à outils" },
+    "revert": { "emoji": "🦩", "sens": "annulation", "pourquoi": "le flamant fait demi-tour" }
+  },
+  "incompatible": { "emoji": "🧨", "sens": "changement incompatible (avec « ! »)", "pourquoi": "la dynamite : ça casse" }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@carolinedanslesnuages/rose",
+  "version": "0.0.0",
+  "description": "Tes gitmoji roses, rouges et violets, dans le bon ordre pour Conventional Commits (« feat: 🌸 … ») : hook Git, commande et action GitHub.",
+  "type": "module",
+  "bin": { "rose": "bin/rose.mjs" },
+  "files": ["bin", "src", "rose.json", "action.yml"],
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "keywords": ["gitmoji", "conventional-commits", "git-hook", "emoji"],
+  "repository": { "type": "git", "url": "git+https://github.com/Carolinedanslesnuages/rose.git" },
+  "license": "MIT"
+}

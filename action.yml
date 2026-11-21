@@ -1,0 +1,18 @@
+name: Rose — emoji du titre de PR
+description: "Vérifie que le titre de la pull request porte l'emoji de ta liste Rose pour son type (« feat: 🌸 … »). Les PR des robots ne sont pas vérifiées."
+author: Carolinedanslesnuages
+
+runs:
+  using: composite
+  steps:
+    - name: Vérifier l'emoji du titre
+      shell: bash
+      env:
+        TITRE: ${{ github.event.pull_request.title }}
+        AUTEUR: ${{ github.event.pull_request.user.login }}
+      run: |
+        if [[ "$AUTEUR" == *"[bot]" ]]; then
+          echo "::notice title=Rose::PR ouverte par $AUTEUR : emoji non vérifié."
+          exit 0
+        fi
+        node "${{ github.action_path }}/bin/rose.mjs" verifier "$TITRE"
