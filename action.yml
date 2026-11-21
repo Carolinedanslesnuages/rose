@@ -8,11 +8,11 @@ runs:
     - name: Vérifier l'emoji du titre
       shell: bash
       env:
-        TITRE: ${{ github.event.pull_request.title }}
-        AUTEUR: ${{ github.event.pull_request.user.login }}
+        TITLE: ${{ github.event.pull_request.title }}
+        AUTHOR: ${{ github.event.pull_request.user.login }}
       run: |
-        if [[ "$AUTEUR" == *"[bot]" ]]; then
-          echo "::notice title=Rose::PR ouverte par $AUTEUR : emoji non vérifié."
+        if [[ "$AUTHOR" == *"[bot]" ]]; then
+          echo "::notice title=Rose::PR ouverte par $AUTHOR : emoji non vérifié."
           exit 0
         fi
-        node "${{ github.action_path }}/bin/rose.mjs" verifier "$TITRE"
+        node "${{ github.action_path }}/bin/rose.mjs" verifier "$TITLE"
