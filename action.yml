@@ -1,5 +1,5 @@
 name: Rose — emoji du titre de PR
-description: "Vérifie que le titre de la pull request porte l'emoji de ta liste Rose pour son type (« feat: 🌸 … »). Les PR des robots ne sont pas vérifiées."
+description: "Vérifie que le titre de la PR porte l'emoji de ta liste Rose pour son type (« feat: 🌸 … »). Les PR des robots sont ignorées."
 author: Carolinedanslesnuages
 
 runs:
@@ -16,3 +16,7 @@ runs:
           exit 0
         fi
         node "${{ github.action_path }}/bin/rose.mjs" verifier "$TITLE"
+
+branding:
+  icon: feather
+  color: purple
