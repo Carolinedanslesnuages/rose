@@ -44,6 +44,16 @@ Un fichier `.rose.json` à la racine du dépôt complète ou remplace la liste :
 Un type à toi (ici `a11y`) doit aussi être autorisé par Constance (réglage `types` de
 `titre-pr`), sinon elle refusera le titre de la PR.
 
+## À quoi ça ressemble
+
+```text
+$ rose verifier "feat: ajouter l'export CSV"
+✗ il manque l'emoji : « feat: 🌸 ajouter l'export CSV »
+
+$ rose titre feat "ajouter l'export CSV"
+feat: 🌸 ajouter l'export CSV
+```
+
 ## Utilisation
 
 Il faut Node.js 20 ou plus récent.
