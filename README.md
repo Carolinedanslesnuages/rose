@@ -61,7 +61,7 @@ Il faut Node.js 20 ou plus récent.
 ### Le plus simple : le hook Git
 
 ```sh
-npx github:Carolinedanslesnuages/rose hook installer
+npx @carolinedanslesnuages/rose hook installer
 ```
 
 Ensuite, tu commites comme d'habitude, et Rose ajoute l'emoji :
@@ -80,10 +80,10 @@ git commit -m "feat: ajouter l'export CSV"   →   feat: 🌸 ajouter l'export C
 ### La commande
 
 ```sh
-npx github:Carolinedanslesnuages/rose                      # compose un commit pas à pas
-npx github:Carolinedanslesnuages/rose liste
-npx github:Carolinedanslesnuages/rose titre feat ajouter l\'export   # pour un titre de PR
-npx github:Carolinedanslesnuages/rose verifier "feat: 🐞 ajouter X"
+npx @carolinedanslesnuages/rose                      # compose un commit pas à pas
+npx @carolinedanslesnuages/rose liste
+npx @carolinedanslesnuages/rose titre feat ajouter l\'export   # pour un titre de PR
+npx @carolinedanslesnuages/rose verifier "feat: 🐞 ajouter X"
 # ✗ 🐞 est l'emoji de « fix », pas de « feat » (attendu : 🌸).
 ```
 
